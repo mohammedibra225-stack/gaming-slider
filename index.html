@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Slider</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;600&display=swap" rel="stylesheet"/>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="#" class="active">Home</a>
+        <a href="#">About</a>
+        <a href="#">Portfolio</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+      </nav>
+    </header>
+
+    <!-- ░░ SLIDER EXISTANT — inchangé ░░ -->
+    <div class="slider">
+      <div class="list">
+        <div class="item">
+          <img src="./images/1.jpg" alt="" />
+          <div class="content">
+            <div class="title">IMAGE SLIDER</div>
+            <div class="type">WATCH DOGS</div>
+            <div class="description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti
+              temporibus quis eum consequuntur voluptate quae doloribus
+              distinctio. Possimus, sed recusandae. Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Sequi, aut.
+            </div>
+            <div class="button"><button>SEE MORE</button></div>
+          </div>
+        </div>
+
+        <div class="item">
+          <img src="./images/2.jpg" alt="" />
+          <div class="content">
+            <div class="title">IMAGE SLIDER</div>
+            <div class="type">TOMB RAIDER</div>
+            <div class="description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti
+              temporibus quis eum consequuntur voluptate quae doloribus
+              distinctio. Possimus, sed recusandae. Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Sequi, aut.
+            </div>
+            <div class="button"><button>SEE MORE</button></div>
+          </div>
+        </div>
+
+        <div class="item">
+          <img src="./images/3.jpg" alt="" />
+          <div class="content">
+            <div class="title">IMAGE SLIDER</div>
+            <div class="type">ASSASSIN'S CREED UNITY</div>
+            <div class="description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti
+              temporibus quis eum consequuntur voluptate quae doloribus
+              distinctio. Possimus, sed recusandae. Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Sequi, aut.
+            </div>
+            <div class="button"><button>SEE MORE</button></div>
+          </div>
+        </div>
+
+        <div class="item">
+          <img src="./images/4.jpg" alt="" />
+          <div class="content">
+            <div class="title">IMAGE SLIDER</div>
+            <div class="type">GHOST OF TSUSHIMA</div>
+            <div class="description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti
+              temporibus quis eum consequuntur voluptate quae doloribus
+              distinctio. Possimus, sed recusandae. Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Sequi, aut.
+            </div>
+            <div class="button"><button>SEE MORE</button></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="thumbnail">
+        <div class="item"><img src="./images/1.jpg" alt=""></div>
+        <div class="item"><img src="./images/2.jpg" alt=""></div>
+        <div class="item"><img src="./images/3.jpg" alt=""></div>
+        <div class="item"><img src="./images/4.jpg" alt=""></div>
+      </div>
+
+      <div class="arrowButtons">
+        <button class="prev"> &lt; </button>
+        <button class="next"> &gt; </button>
+      </div>
+    </div>
+    <!-- ░░ FIN SLIDER ░░ -->
+
+
+    <!-- ══════════════════════════════════════
+         NOUVELLES SECTIONS SCROLL ANIMATION
+    ══════════════════════════════════════ -->
+
+    <!-- SECTION 1 — GRILLE DE JEUX -->
+    <section class="games-section">
+      <div class="section-header scroll-reveal">
+        <span class="section-label">— NOS JEUX</span>
+        <h2 class="section-title">Dernières <span>Sorties</span></h2>
+      </div>
+
+      <div class="cards-grid">
+        <div class="card scroll-reveal" style="--delay:0s">
+          <img src="./images/1.jpg" alt="Watch Dogs" class="card__img"/>
+          <div class="card__overlay">
+            <span class="card__tag">Open World</span>
+            <h3 class="card__title">Watch Dogs</h3>
+            <p class="card__sub">Hacker la ville pour survivre</p>
+            <a href="#" class="card__cta">Découvrir →</a>
+          </div>
+        </div>
+
+        <div class="card scroll-reveal" style="--delay:0.15s">
+          <img src="./images/2.jpg" alt="Tomb Raider" class="card__img"/>
+          <div class="card__overlay">
+            <span class="card__tag">Aventure</span>
+            <h3 class="card__title">Tomb Raider</h3>
+            <p class="card__sub">Survivre dans l'inconnu</p>
+            <a href="#" class="card__cta">Découvrir →</a>
+          </div>
+        </div>
+
+        <div class="card scroll-reveal" style="--delay:0.3s">
+          <img src="./images/3.jpg" alt="Assassin's Creed" class="card__img"/>
+          <div class="card__overlay">
+            <span class="card__tag">Action RPG</span>
+            <h3 class="card__title">AC Unity</h3>
+            <p class="card__sub">Paris en pleine révolution</p>
+            <a href="#" class="card__cta">Découvrir →</a>
+          </div>
+        </div>
+
+        <div class="card scroll-reveal" style="--delay:0.45s">
+          <img src="./images/4.jpg" alt="Ghost of Tsushima" class="card__img"/>
+          <div class="card__overlay">
+            <span class="card__tag">Samouraï</span>
+            <h3 class="card__title">Ghost of Tsushima</h3>
+            <p class="card__sub">L'honneur du dernier guerrier</p>
+            <a href="#" class="card__cta">Découvrir →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- SECTION 2 — STATS COMPTEUR -->
+    <section class="stats-section">
+      <div class="stat scroll-reveal" style="--delay:0s">
+        <span class="stat__num" data-target="4200000">0</span>
+        <span class="stat__label">Joueurs actifs</span>
+      </div>
+      <div class="stat scroll-reveal" style="--delay:0.2s">
+        <span class="stat__num" data-target="320">0</span>
+        <span class="stat__label">Titres disponibles</span>
+      </div>
+      <div class="stat scroll-reveal" style="--delay:0.4s">
+        <span class="stat__num" data-target="98">0</span>
+        <span class="stat__label">% Satisfaction</span>
+      </div>
+    </section>
+
+
+    <!-- SECTION 3 — À PROPOS + PARALLAX -->
+    <section class="about-section">
+      <div class="about-parallax" id="aboutParallax"></div>
+      <div class="about-content">
+        <p class="about-label scroll-reveal">— À PROPOS</p>
+        <h2 class="about-title scroll-reveal">
+          L'univers du <span>Gaming</span><br>redéfini.
+        </h2>
+        <p class="about-text scroll-reveal">
+          Nous rassemblons les meilleurs titres AAA en un seul endroit.
+          Des aventures épiques, des mondes ouverts immenses et des
+          histoires inoubliables vous attendent.
+        </p>
+        <a href="#" class="btn-red scroll-reveal">Explorer la collection</a>
+      </div>
+    </section>
+
+
+    <script src="script.js"></script>
+  </body>
+</html>
