@@ -1,11 +1,4 @@
-/* ============================================================
-   script.js
-   = TON JS ORIGINAL (slider) + scroll animations
-   ============================================================ */
 
-/* ────────────────────────────────────────────────────────────
-   PARTIE 1 — SLIDER ORIGINAL (inchangé)
-──────────────────────────────────────────────────────────── */
 let nextBtn = document.querySelector(".next");
 let prevBtn = document.querySelector(".prev");
 
@@ -43,14 +36,10 @@ function moveSlider(direction) {
 }
 
 
-/* ────────────────────────────────────────────────────────────
-   PARTIE 2 — SCROLL ANIMATIONS (nouvelles sections)
-──────────────────────────────────────────────────────────── */
+
 document.addEventListener("DOMContentLoaded", () => {
 
-  /* 2a. SCROLL REVEAL — IntersectionObserver
-         Tous les éléments .scroll-reveal entrent en vue → .in-view
-  ─────────────────────────────────────────────────────────── */
+
   const revealEls = document.querySelectorAll(".scroll-reveal");
 
   const revealObserver = new IntersectionObserver(
@@ -58,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add("in-view");
-          revealObserver.unobserve(entry.target); // one-shot
+          revealObserver.unobserve(entry.target); 
         }
       });
     },
@@ -71,9 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
   revealEls.forEach((el) => revealObserver.observe(el));
 
 
-  /* 2b. PARALLAX — section About
-         L'image de fond bouge plus lentement que le scroll
-  ─────────────────────────────────────────────────────────── */
+
   const aboutParallax = document.getElementById("aboutParallax");
 
   if (aboutParallax) {
@@ -85,8 +72,8 @@ document.addEventListener("DOMContentLoaded", () => {
         const inView   = rect.top < window.innerHeight && rect.bottom > 0;
 
         if (inView) {
-          // Décalage relatif à la position dans la fenêtre
-          const offset = (rect.top / window.innerHeight) * 40; // max ~40px
+          
+          const offset = (rect.top / window.innerHeight) * 40; 
           aboutParallax.style.transform = `translateY(${offset}px)`;
         }
       },
@@ -95,9 +82,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 
-  /* 2c. COMPTEUR ANIMÉ — chiffres dans .stats-section
-         Démarre quand la section entre dans le viewport
-  ─────────────────────────────────────────────────────────── */
   const statNums = document.querySelectorAll(".stat__num[data-target]");
 
   const counterObserver = new IntersectionObserver(
@@ -119,13 +103,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function step(now) {
       const progress = Math.min((now - start) / duration, 1);
-      const eased    = 1 - Math.pow(1 - progress, 3); // ease-out cubic
+      const eased    = 1 - Math.pow(1 - progress, 3); 
       const current  = Math.floor(eased * target);
 
-      // Formatage avec séparateur de milliers
+    
       el.textContent = current.toLocaleString("fr-FR");
 
-      // Suffixe % pour la stat satisfaction
+      
       if (target === 98 && progress >= 1) el.textContent = "98%";
 
       if (progress < 1) requestAnimationFrame(step);
