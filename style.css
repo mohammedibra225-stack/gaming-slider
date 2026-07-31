@@ -1,7 +1,4 @@
-/* ============================================================
-   style.css
-   = TON CSS ORIGINAL (slider) + nouvelles sections scroll
-   ============================================================ */
+
 
 * {
   margin: 0;
@@ -15,7 +12,7 @@ body {
   color: white;
 }
 
-/* ── NAV (original) ─────────────────────────────────────── */
+
 nav {
   height: 50px;
   display: flex;
@@ -39,7 +36,7 @@ a:hover {
   border-radius: 5px;
 }
 
-/* ── SLIDER (original, inchangé) ────────────────────────── */
+
 .slider {
   height: 100vh;
   margin-top: -50px;
@@ -242,10 +239,7 @@ a:hover {
 }
 
 
-/* ══════════════════════════════════════════════════════════
-   NOUVELLES SECTIONS — SCROLL ANIMATION
-   Variables communes
-   ══════════════════════════════════════════════════════════ */
+
 
 :root {
   --red:   #ff1414cb;
@@ -257,7 +251,7 @@ a:hover {
   --ff-body:    'Barlow', sans-serif;
 }
 
-/* ── SCROLL REVEAL — classe réutilisable ────────────────── */
+
 .scroll-reveal {
   opacity: 0;
   transform: translateY(50px);
@@ -270,7 +264,7 @@ a:hover {
   transform: translateY(0);
 }
 
-/* ── SECTION JEUX ───────────────────────────────────────── */
+
 .games-section {
   padding: 7rem 6vw 5rem;
   background: var(--dark);
@@ -378,7 +372,7 @@ a:hover {
 }
 .card:hover .card__cta { opacity: 1; transform: translateX(0); }
 
-/* ── STATS ──────────────────────────────────────────────── */
+
 .stats-section {
   background: #0a0a0a;
   border-top: 1px solid rgba(255,20,20,0.2);
@@ -411,7 +405,7 @@ a:hover {
   margin-top: 0.5rem;
 }
 
-/* ── ABOUT + PARALLAX ───────────────────────────────────── */
+
 .about-section {
   position: relative;
   min-height: 70vh;
@@ -421,7 +415,7 @@ a:hover {
   background: var(--mid);
 }
 
-/* La couche image qui bougera en parallax via JS */
+
 .about-parallax {
   position: absolute;
   inset: -20% 0;
@@ -484,7 +478,7 @@ a:hover {
   color: var(--red);
 }
 
-/* ── RESPONSIVE ─────────────────────────────────────────── */
+
 @media screen and (max-width: 678px) {
   nav { margin-left: 0; justify-content: center; gap: 10px; }
   a { font-size: 0.7rem; }
